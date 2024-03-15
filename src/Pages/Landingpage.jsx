@@ -1,96 +1,55 @@
-import { makeStyles } from '@mui/styles';
-import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
-import Container from '@mui/material/Container';
-import Grid from '@mui/material/Grid';
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import HeroSec from '../assets/Herosec.jpg';
+import HeroSec from "../assets/Herosec.jpg"
 
-const useStyles = makeStyles((theme) => ({
-  heroSection: {
-    position: 'relative',
-    width: '100vw',
-    height: '70vh',
-  },
-  heroText: {
-    position: 'absolute',
-    top: '64px',
-    left: '10px',
-    color: 'white',
-    [theme.breakpoints.up('md')]: {
-      fontSize: '7rem',
-    },
-    fontSize: '5rem',
-    fontWeight: 'bold',
-  },
-  featureSection: {
-    marginTop: theme.spacing(10),
-  },
-  featureCard: {
-    width: '25vw',
-    height: '30vh',
-    borderRadius: '16px',
-    marginBottom: theme.spacing(4),
-  },
-  featureImage: {
-    height: '50%',
-  },
-  featureText: {
-    color: 'rgba(0, 0, 0, 0.6)',
-    marginTop: theme.spacing(2),
-    marginBottom: theme.spacing(4),
-  },
-  exploreButton: {
-    backgroundColor: '#7b1fa2',
-    color: 'white',
-    '&:hover': {
-      backgroundColor: '#691884',
-    },
-  },
-}));
-
-function LandingPage() {
-  const classes = useStyles();
+function Landingpage() {
 
   return (
     <>
-      <div className={classes.heroSection}>
-        <Typography variant="h1" className={classes.heroText}>
-          This is a Landing Page
-        </Typography>
-        <img src={HeroSec} alt="" className={classes.heroImage} />
+      <div>
+      <h1 className="md:text-7xl text-5xl font-bold absolute top-64 left-10 text-white">This is a Landing Page</h1>
+      <h1 className="md:text-xl text-base font-medium absolute top-96 md:w-[40vw] w-[80vw] left-10 text-white">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda, ad cupiditate. Perspiciatis optio tempore repellat odit aliquid, iusto reprehenderit hic cum cupiditate corporis minima repudiandae quia quis delectus aperiam esse?</h1>
+      <img src={HeroSec} alt="" className="w-[100vw] md:h-[100vh] h-[70vh]" />
+    </div>
+     <div className="flex flex-col items-center justify-center px-6">
+        <h1 className="font-bold text-5xl md:mb-16 mb-8 md:mt-20 mt-10">Our Features</h1>
+        <div className="flex md:flex-row flex-col items-center justify-around w-[100vw] mx-6">
+            <div className="flex flex-col md:w-[25vw] md:h-[30vh] rounded-2xl mb-4">
+                <img src={HeroSec} alt="" />
+                <h1 className="text-black/60 mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?</h1>
+                <button className="px-4 py-2 rounded-xl bg-purple-700 text-white">Explore</button>
+            </div>
+            <div className="flex flex-col md:w-[25vw] md:h-[30vh] rounded-2xl mb-4">
+                <img src={HeroSec} alt="" />
+                <h1 className="text-black/60 mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?</h1>
+                <button className="px-4 py-2 rounded-xl bg-purple-700 text-white">Explore</button>
+            </div>
+            <div className="flex flex-col md:w-[25vw] md:h-[30vh] rounded-2xl">
+                <img src={HeroSec} alt="" />
+                <h1 className="text-black/60 mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?</h1>
+                <button className="px-4 py-2 rounded-xl bg-purple-700 text-white">Explore</button>
+            </div>
+            
+        </div>
+        <div className="flex md:flex-row flex-col items-center justify-around w-[100vw] mt-40 mx-6">
+            <div className="flex flex-col md:w-[25vw] md:h-[30vh] rounded-2xl mb-4">
+                <img src={HeroSec} alt="" />
+                <h1 className="text-black/60 mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?</h1>
+                <button className="px-4 py-2 rounded-xl bg-purple-700 text-white">Explore</button>
+            </div>
+            <div className="flex flex-col md:w-[25vw] md:h-[30vh] rounded-2xl mb-4">
+                <img src={HeroSec} alt="" />
+                <h1 className="text-black/60 mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?</h1>
+                <button className="px-4 py-2 rounded-xl bg-purple-700 text-white">Explore</button>
+            </div>
+            <div className="flex flex-col md:w-[25vw] md:h-[30vh] rounded-2xl">
+                <img src={HeroSec} alt="" />
+                <h1 className="text-black/60 mt-2 mb-4">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?</h1>
+                <button className="px-4 py-2 rounded-xl bg-purple-700 text-white">Explore</button>
+            </div>
+            
+        </div>
       </div>
-      <Container className={classes.featureSection}>
-        <Typography variant="h1" align="center" gutterBottom>
-          Our Features
-        </Typography>
-        <Grid container spacing={4} justify="center">
-          {[1, 2, 3].map((feature) => (
-            <Grid item key={feature}>
-              <Card className={classes.featureCard}>
-                <CardMedia
-                  component="img"
-                  image={HeroSec}
-                  alt={`Feature ${feature}`}
-                  className={classes.featureImage}
-                />
-                <CardContent>
-                  <Typography variant="body1" className={classes.featureText}>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde dolorum nulla facere assumenda provident modi quasi natus dicta debitis reprehenderit, eligendi ex dolorem?
-                  </Typography>
-                  <Button variant="contained" className={classes.exploreButton}>
-                    Explore
-                  </Button>
-                </CardContent>
-              </Card>
-            </Grid>
-          ))}
-        </Grid>
-      </Container>
     </>
-  );
+  )
 }
 
-export default LandingPage;
+export default Landingpage
